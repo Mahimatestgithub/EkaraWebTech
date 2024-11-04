@@ -1,0 +1,135 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    width: 80%; /* Set width to 90% for responsiveness */
+    max-width: 800px; /* Maximum width */
+    height: 650; /* Allow height to adjust */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(50, 50, 50, 0.9);
+}
+
+/*.container {
+    display: flex;
+    width: 60%;
+    height: 80%;
+    max-width: 800px; 
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(50, 50, 50, 0.9);
+}*/
+
+/* Left box styling */
+.left-box {
+    background-color: #29cc56;
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.left-box h2 {
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Right box styling */
+.right-box {
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow the form to grow and fill space */
+    justify-content: space-between; /* Distribute space */
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    background-color: #29cc56;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ensures the button is full width */
+}
+
+button:hover {
+    background-color: #25b44e;
+}
+
+/* Asterisk for required fields */
+.required {
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Media Query for responsive design */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        width: 90%; /* Full width on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .left-box {
+        width: 100%; /* Full width for left box */
+        border-radius: 10px 10px 0 0; /* Adjust corners */
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .right-box {
+        width: 100%; /* Full width for right box */
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    button {
+        margin-top: 10px; /* Margin to separate from inputs */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller font size for headers */
+    }
+
+    label, input {
+        font-size: 12px; /* Smaller font for inputs */
+    }
+}
