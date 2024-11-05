@@ -217,6 +217,93 @@ a {
 }
 
 
+
+/* Responsive navbar */
+@media (max-width: 1064px) {
+    /* Hide the nav links and show the hamburger icon */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #F0FFF4;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    /* Show the nav links when the .show class is added */
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Style for hamburger icon */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #333;
+    }
+}
+
+@media (min-width: 1064px) {
+    .hamburger {
+        display: none;
+    }
+}
+/* Responsive nav-buttons */
+@media (max-width: 550px) {
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    /* Adjust button sizing */
+    .apply-btn, .login-btn, .signup-btn {
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+
+
+/* Responsive footer for width less than 450 pixels */
+@media (max-width: 450px) {
+    footer {
+        padding: 15px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center items */
+        text-align: center; /* Center text */
+    }
+
+    .footer-column {
+        margin-bottom: 15px; /* Add spacing between columns */
+        width: 100%; /* Allow columns to take full width */
+    }
+
+    .footer-column h4 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .footer-column ul li {
+        font-size: 14px; /* Adjust list item size */
+    }
+
+    .copyright {
+        font-size: 10px; /* Smaller font size for copyright */
+        margin-top: 15px; /* Adjust margin */
+    }
+}
+
+
+
     </style>
 </head>
 <body>
