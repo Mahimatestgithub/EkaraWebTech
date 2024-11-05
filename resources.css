@@ -52,7 +52,7 @@ nav {
 .nav-buttons {
     display: flex;
     gap: 10px;
-    align-items: ce;
+    align-items: center;
 }
 
 .apply-btn,
@@ -116,8 +116,24 @@ h4 {
     margin-top: 20px;
 }
 
+/* Responsive video grid for screens smaller than 1050px */
+@media (max-width: 1050px) {
+    .video-grid {
+        display: flex;
+        flex-direction: column; /* Stack all video cards vertically */
+        align-items: center;
+        gap: 20px; /* Space between cards */
+    }
+
+    .video-card {
+        width: 90%; /* Full width with margin for smaller screens */
+        max-width: 500px; /* Limit max width to keep it manageable */
+        margin: 0 auto; /* Center align the cards */
+    }
+}
+
 .video-card {
-    width: 300px;
+    width: 300px; /* Default width for larger screens */
     text-align: center;
 }
 
@@ -247,8 +263,6 @@ a:hover {
     border-radius: 8px;
 }
 
-
-
 /* Responsive navbar */
 @media (max-width: 1064px) {
     /* Hide the nav links and show the hamburger icon */
@@ -283,6 +297,7 @@ a:hover {
         display: none;
     }
 }
+
 /* Responsive nav-buttons */
 @media (max-width: 550px) {
     .nav-buttons {
@@ -299,9 +314,6 @@ a:hover {
         font-size: 14px;
     }
 }
-
-
-
 
 /* Responsive footer for width less than 450 pixels */
 @media (max-width: 450px) {
